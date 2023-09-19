@@ -46,7 +46,9 @@
                     );
 
                     $entidade = $retorno[0];
+
                 }
+                $texto = isset($entidade['texto']) ? trim($entidade['texto']) : '';
                 ?>
 
                 <h2>Post</h2>
@@ -58,10 +60,14 @@
                         <input class="form-group" type="text" require="require" id="titulo" name="titulo" value="<?php echo $entidade['titulo'] ?? '' ?>">
                     </div>
                     <div class="form-group">
-                        <label for="texto">Texto:</label>
-                        <textarea class="form-control" type="text" require="require" id="texto" name="texto" rows="5">
-                                    <?php echo $entidade['texto'] ?? '' ?>
-                                </textarea>
+                        
+                    <label for="texto">Texto:</label>
+                    <textarea class="form-control" id="texto" name="texto" rows="5" required><?php echo $texto; ?></textarea>
+
+                        
+
+
+
                     </div>
                     <div class="form-group">
                         <label for="texto">Postar em:</label>
@@ -94,7 +100,12 @@
             </div>
         </div>
     </div>
-    <script src="lib/js/boostrap.min.js"></script>
+    <script src="lib/js/boostrap.min.js">
+
+
+
+
+    </script>
 </body>
 
 </html>
