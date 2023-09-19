@@ -24,6 +24,7 @@
                 require_once 'core/mysql.php';
 
                 if (isset($_SESSION['login'])) {
+                    // verifica se está logado
                     $id = (int) $_SESSION['login']['usuario']['id'];
 
                     $criterio = [
@@ -31,6 +32,7 @@
                     ];
 
                     $retorno = buscar(
+                        // busca dados do usuário 
                         'usuario',
                         ['id', 'nome', 'email'],
                         $criterio
@@ -42,7 +44,10 @@
                 <h2>Usuário</h2>
                 <form action="core/usuario_repositorio.php" method="post">
                     <input type="hidden" name="acao" value="<?php echo empty($id) ? 'insert' : 'update' ?>">
+                    <!-- se usuário estiver logado, ele altera dados. Caso não, ele pode criar uma conta -->
                     <input type="hidden" name="id" value="<?php echo $entidade['id'] ?? '' ?>">
+                    <!-- ?? é um if binário -->
+                    <!-- Como uma ?, se a primeira condição for verdadeira, executa a primeira. Caso falso, executa a segunda -->
                     <div class="form-group">
                         <label for="nome">Nome</label>
                         <input type="text" name="nome" id="nome" class="form-control" require="required" value="<?php echo $entidade['nome'] ?? '' ?>">

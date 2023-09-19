@@ -27,4 +27,3 @@ function update_teste($id, $nota, $comentario, $usuario_id, $post_id): void{
     $criterio = [['id', '=', $id]];
     atualiza('avaliacao', $dados, $criterio);
 }
-?>

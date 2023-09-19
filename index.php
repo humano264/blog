@@ -23,8 +23,8 @@
             </div>
             <div class="col-md-10" style="padding-top: 50px;">
                 <h2>Página Inicial</h2>
-        
-        <?php
+
+                <?php
                 include 'includes/busca.php';
                 ?>
 

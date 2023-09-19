@@ -60,4 +60,3 @@ function  select(string $entidade, array $campos, array $criterio = [], string $
     }
     return $instrucao;
 }
-?>

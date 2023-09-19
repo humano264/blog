@@ -34,4 +34,3 @@
     //Teste geração DELETE
     $instrucao = delete($entidade, $criterio);
     echo $instrucao.'<br>';
-?>

@@ -121,4 +121,3 @@ switch($acao){
 
 }
 header ('Location: ../index.php');
-?>

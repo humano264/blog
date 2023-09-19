@@ -5,4 +5,3 @@
         header('Location: login_formulario.php');
         exit;
     }
-?>
