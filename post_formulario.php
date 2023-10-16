@@ -64,6 +64,9 @@
                     <label for="texto">Texto:</label>
                     <textarea class="form-control" id="texto" name="texto" rows="5" required><?php echo $texto; ?></textarea>
 
+                    <label for="sig">Sigla da Universiade(minuscula)</label>
+                    <textarea class="form-control" id="sig" name="sig" rows="5" required><?php echo $texto; ?></textarea>
+
                         
 
 

@@ -16,6 +16,9 @@
             <li class="nav-item">
                 <a href="post_formulario.php" class="nav-link">Incluir Post</a>
             </li>
+            <li class="nav-item">
+                <a href="Universides.html" class="nav-link">Selecionar Universidade</a>
+            </li>
            
             <?php if ((isset($_SESSION['login']))
                 && ($_SESSION['login']['usuario']['adm'] === 1)

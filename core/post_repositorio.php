@@ -21,6 +21,7 @@ switch($acao){
         $dados =[
             'titulo' => $titulo,
             'texto' => $texto,
+            'sig' => $sig,
             'data_postagem' => "$data_postagem $hora_postagem",
             'usuario_id' => $_SESSION['login']['usuario']['id']
         ];
@@ -35,6 +36,7 @@ switch($acao){
         case 'update':
             $dados = [
                 'titulo' => $titulo,
+                'sig' => $sig,
                 'texto' => $texto,
                 'data_postagem' => "$data_postagem $hora_postagem",
                 'usuario_id' => $_SESSION['login']['usuario']['id']
